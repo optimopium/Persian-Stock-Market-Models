@@ -1,0 +1,35 @@
+<!-- templates/extract_keywords.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استخراج کلیدواژه‌ها</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>استخراج نماد‌های بورسی</h1>
+    <form method="post" action="{% url 'symbol_detector:extract_keywords' %}">
+        {% csrf_token %}
+        <label for="text">متن خود را وارد کنید:</label><br>
+        <textarea id="text" name="text" rows="4" cols="50" placeholder="متن مورد نظر خود را اینجا بنویسید..."></textarea><br>
+        <input type="submit" value="استخراج نماد‌های بورسی">
+    </form>
+
+    {% if highlighted_text %}
+        <h2>خروجی:</h2>
+        <div class="text-output">
+            {% autoescape off %}
+            {{ highlighted_text|safe }}
+            {% endautoescape %}
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <div class="error">
+            <strong>خطا:</strong> {{ error }}
+        </div>
+    {% endif %}
+</body>
+</html>

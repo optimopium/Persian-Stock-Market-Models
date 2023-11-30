@@ -1,0 +1,4 @@
+Scrapy
+Django~=4.2.7
+pandas
+doccano

@@ -1,0 +1,130 @@
+/* styles.css */
+
+/* Reset some basic elements */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* Set a background color and font settings */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Style the h1 element */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Style the form */
+form {
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the textarea and input */
+textarea, input[type="text"] {
+  width: calc(100% - 22px); /* Full-width minus padding and border */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding and border in element's width */
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #5C6BC0;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #3F51B5;
+}
+
+/* Style the results list */
+ul {
+  margin-top: 20px;
+  padding-left: 20px; /* Give some space inside the list */
+}
+
+li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* In your styles.css file */
+@font-face {
+    font-family: 'Vazir';
+    src: url('/static/fonts/Vazir.woff2') format('woff2'),
+         url('/static/fonts/Vazir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Vazir Matn', sans-serif;
+    direction: rtl; /* For RTL */
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.text-output {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    white-space: pre-wrap; /* Preserves spaces and line breaks */
+    word-wrap: break-word; /* To prevent long text from overflowing */
+}
+.highlight {
+    background-color: yellow;
+}
+.error {
+    color: red;
+    margin-top: 20px;
+}
