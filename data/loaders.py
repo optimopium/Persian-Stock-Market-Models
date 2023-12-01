@@ -3,10 +3,13 @@ import csv
 from django.conf import settings
 
 
-def load_symbols_from_csv(columns=None):
+def load_symbols_from_csv(columns=None, path=None):
     columns = columns or ['symbol']
     # Use BASE_DIR from settings to construct the path to the CSV file
-    csv_file_path = os.path.join(settings.BASE_DIR, 'data/files/symbols.csv')
+    if path:
+        csv_file_path = path
+    else:
+        csv_file_path = os.path.join(settings.BASE_DIR, 'data/files/symbols.csv')
 
     symbols = []
 
